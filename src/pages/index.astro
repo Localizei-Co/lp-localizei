@@ -1,0 +1,266 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Localizei"
+    actions={[
+      
+      { text: 'Saiba mais', href: '#features' },
+    ]}
+  >
+    <Fragment slot="title">
+      O futuro do varejo <span class="hidden sm:inline">ele é simples</span> e <span
+        class="text-accent dark:text-white highlight">para conectar</span
+      > precisamos unir.
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Construir algo que  <span class="font-semibold">diz "Localizei seu problema e vou resolver"</span> ajuda a emponderar a ambição de toda uma cadeia - do produtor ao cliente final.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/DRdcKMGPEbU?si=Gvl_vcopxwGK4rcB"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full"
+        >
+        </iframe>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Quem somos?"
+    subtitle="Nós somos uma empresa que acredita que tanto o produtor quanto o mercado estão sobrecarregados, e que eficiência é sobre unir e baratear os custos, ajudando assim a criar uma solução que ligue toda uma cadeia"
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Saiba o tamanho do problema que se encontra hoje no mercado brasileiro"
+    subtitle="Esses números refletem o tamanho do problema que se encontra hoje no mercado brasileiro"
+    stats={[
+      { title: 'Percas no varejo', amount: '24 bi' },
+      { title: 'Aplicativos de Mercados separados', amount: '+10k' },
+      { title: 'Custo com software engessado', amount: '+49,90' },
+      { title: 'Colocação do Brasil no Ranking de eficiêcia de varejo', amount: '22°' },
+    ]}
+  />
+
+  <!-- Brands Widget ****************** -->
+
+  
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="O que oferecemos a nossos clientes?"
+    subtitle="Nós oferecemos uma plataforma que conecta o produtor ao mercado, e o mercado ao cliente final, de forma simples e eficiente"
+    items={[
+      {
+        title: 'Produtor',
+        description:
+          'Oferecemos uma solução que ajuda a digitalizar de forma eficiente e inteligente seus produtos até o envio para o distribuidor.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Distribuidor',
+        description:
+          'Oferecemos o controle total de seus produtos, desde a entrada até a saída, e a possibilidade de conectar-se a vários produtores.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Cliente',
+        description:
+          'Oferecemos ao cliente final um aplicativo onde ele encontra o supermercado mais proximo da sua casa, e a possibilidade de saber onde suas compras se tornam mais baratas sem gastar um bom tempo com isso.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    title="Principais Features do Ecossistema"
+    subtitle="Nossas principais features são o que nos tornam únicos e nos ajudam a resolver o problema de forma eficiente"
+    columns={3}
+    items={[
+      {
+        title: 'Uso acessivel até para uma criança.',
+        description:
+          'Acreditamos que design é sobre como as coisas funcionam, e não apenas como elas parecem. Por isso, nossa plataforma é simples e intuitiva, e pode ser usada até por uma criança.',
+        icon: 'tabler:artboard',
+      },
+      {
+        title: 'Queremos colocar o poder de toda uma cadeia na palma da sua mão.',
+        description: 'Acreditamos que o poder de toda uma cadeia está na palma da sua mão, e por isso, queremos colocar ele lá.',
+        icon: 'tabler:picture-in-picture',
+      },
+      {
+        title: 'Um sistema que se adapta ao cliente e não o cliente se adapta a ele',
+        description:
+          'Acreditamos que um sistema deve se adaptar ao cliente e não o cliente se adaptar a ele, e por isso, nossa plataforma é totalmente customizável.',
+        icon: 'tabler:adjustments-horizontal',
+      },
+      {
+        title: 'Acreditamos e sabemos da pressa dos nossos clientes',
+        description: 'O tempo é dinheiro, e por isso, nossa plataforma é rápida e eficiente.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Nos acreditamos que nosso cliente merece conversar com sua empresa',
+        description:
+          'Acreditamos que o nosso cliente quer tomar a melhor decisão e mesmo que ele não tenha qualquer formação, nós oferecemos a ele a possibilidade de conversar com a empresa.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Começe pequeno como um grande.',
+        description: 'Acreditamos que para um cliente começar sua empresa, independende de ser produtor ou distribuidor, com um celular ou com o mais moderno computador ele terá as mesmas oportunidades.',
+        icon: 'tabler:plug-connected',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Ficou com alguma dúvida?"
+    items={[
+      {
+        title: 'Qual a diferença entre esse sistema e um ERP?',
+        description:
+          'Um ERP é um sistema de gestão empresarial, que tem como objetivo integrar todos os dados e processos de uma organização em um único sistema. Já o nosso sistema tem como objetivo conectar o produtor ao mercado, e o mercado ao cliente final, de forma simples e eficiente.',
+      },
+      {
+        title: 'Como eu posso me candidatar a lista de espera para usar esse sistema?',
+        description:
+          'Para se candidatar a lista de espera, basta preencher o formulário de contato no final da página.',
+      },
+      {
+        title: 'A partir de quando eu posso usar esse sistema?',
+        description:
+          'A partir de 2024, nós iremos começar a liberar o acesso para os primeiros candidatos da lista de espera.',
+      },
+      {
+        title: 'Quanto custa esse sistema?',
+        description:
+          'O custo do sistema é perpendicular ao tamanho da sua empresa, ou seja, quanto maior a sua empresa, maior o custo do sistema. Para saber o custo do sistema para a sua empresa, basta preencher o formulário de contato no final da página.',
+      },
+      {
+        title: 'Quem está por trás desse sistema?',
+        description:
+          'O sistema é desenvolvido pela Localizei, uma empresa que acredita que tanto o produtor quanto o mercado estão sobrecarregados, e que eficiência é sobre unir e baratear os custos, ajudando assim a criar uma solução que ligue toda uma cadeia.',
+      },
+      {
+        title: 'Como eu posso customizar esse sistema?',
+        description:
+          "Usaremos o que tem de mais moderno em tecnologia, e por isso, você poderá customizar o sistema de acordo com a sua necessidade. Para saber mais sobre como customizar o sistema, basta preencher o formulário de contato no final da página.",
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Ficou com mais alguma dúvida?"
+    subtitle="Entre em contato conosco e nós iremos te ajudar a sanar todas as suas dúvidas"
+    columns={4}
+    items={[
+      {
+        title: 'Contato',
+        icon: 'tabler:phone',
+        callToAction: {
+          target: '_blank',
+          text: '5583998172964',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Email',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'contato@localizei.com',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Instagram',
+        icon: 'tabler:brand-instagram',
+        callToAction: {
+          target: '_blank',
+          text: '@localizei',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Facebook',
+        icon: 'tabler:brand-facebook',
+        callToAction: {
+          target: '_blank',
+          text: '@localizei',
+          href: '/',
+          variant: 'link',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      target: '_blank',
+      text: 'Acesse aqui o formulário de inscrição',
+      href: 'https://github.com/onwidget/astrowind',
+     
+    }]}
+  >
+    <Fragment slot="title">Quem chega primeiro bebe agua limpa!</Fragment>
+
+    <Fragment slot="subtitle">
+      Preencha o formulário abaixo e nós entraremos em contato com você
+    </Fragment>
+  </CallToAction>
+</Layout>
